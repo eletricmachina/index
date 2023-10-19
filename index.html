@@ -1,68 +1,104 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>/x/ - 4chan Catalog Reader</title>
+    <title>Black Sabbath Wiki</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #000;
-            color: #00FF00;
-            margin: 0;
-            padding: 0;
+            margin: 20px;
+            background-color: #000; /* Cor de fundo preta (pitch black) */
+            color: #f0f0f0; /* Cor de texto em tom pastel claro */
         }
-
-        #content {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
+        h1 {
+            font-size: 28px;
         }
-
+        h2 {
+            font-size: 24px;
+            border-bottom: 1px solid #f0f0f0; /* Cor da borda pastel claro */
+        }
         ul {
-            list-style-type: none;
-            padding: 0;
+            list-style-type: disc;
+            padding-left: 20px;
         }
-
         li {
-            margin-bottom: 20px;
-            border: 1px solid #00FF00;
-            padding: 10px;
+            margin: 5px 0;
+        }
+        .album-cover {
+            width: 220px;
+            height: 220px;
         }
     </style>
 </head>
 <body>
-    <div id="content">
-        <h1>/x/ - 4chan Catalog Reader</h1>
-        <ul id="thread-list">
-            <!-- Threads will be added here via JavaScript -->
-        </ul>
-    </div>
-    <script>
-        // Function to fetch and display the threads
-        function fetchThreads() {
-            const catalogUrl = "https://a.4cdn.org/x/catalog.json";
-            const threadList = document.getElementById("thread-list");
+    <h1>Black Sabbath</h1>
 
-            fetch(catalogUrl)
-                .then((response) => response.json())
-                .then((data) => {
-                    data[0].threads.forEach((thread) => {
-                        const threadItem = document.createElement("li");
-                        threadItem.innerHTML = `
-                            <a href="https://boards.4chan.org/x/thread/${thread.no}" target="_blank">
-                                ${thread.sub ? thread.sub : "No Subject"} (${thread.replies})
-                            </a>
-                            <p>${thread.com ? thread.com : "No content"}</p>
-                        `;
-                        threadList.appendChild(threadItem);
-                    });
-                })
-                .catch((error) => {
-                    console.error("An error occurred:", error);
-                });
-        }
+    <h2>Discografia</h2>
+    <ul>
+        <li><strong><a href="https://en.wikipedia.org/wiki/Black_Sabbath_(album)">Black Sabbath (1970)</a></strong> - O álbum de estreia da banda.</li>
+        <img class="album-cover" src="https://upload.wikimedia.org/wikipedia/en/thumb/d/da/Black_Sabbath_debut_album.jpg/220px-Black_Sabbath_debut_album.jpg" alt="Capa do álbum Black Sabbath (1970)">
+        <p><strong>Tracklist:</strong>
+            <ul>
+                <li>Black Sabbath (6:20)</li>
+                <li>The Wizard (4:22)</li>
+                <li>Wasp (2:18)</li>
+                <li>Behind the Wall of Sleep (3:40)</li>
+                <li>Bassically (0:42)</li>
+                <li>N.I.B. (6:05)</li>
+                <li>Wicked World (4:45)</li>
+                <li>A Bit of Finger (0:51)</li>
+                <li>Sleeping Village (3:46)</li>
+                <li>Warning (10:32)</li>
+            </ul>
+        </p>
 
-        // Fetch and display threads when the page loads
-        fetchThreads();
-    </script>
+        <li><strong><a href="https://en.wikipedia.org/wiki/Paranoid_(album)">Paranoid (1971)</a></strong> - Segundo álbum da banda.</li>
+        <img class="album-cover" src="https://upload.wikimedia.org/wikipedia/en/6/64/Black_Sabbath_-_Paranoid.jpg" alt="Capa do álbum Paranoid (1971)">
+        <p><strong>Tracklist:</strong>
+            <ul>
+                <li>War Pigs (7:55)</li>
+                <li>Paranoid (2:50)</li>
+                <li>Planet Caravan (4:30)</li>
+                <li>Iron Man (5:57)</li>
+                <li>Electric Funeral (4:51)</li>
+                <li>Hand of Doom (7:08)</li>
+                <li>Rat Salad (2:30)</li>
+                <li>Jack the Stripper (1:39)</li>
+                <li>Fairies Wear Boots (6:15)</li>
+            </ul>
+        </p>
+
+        <li><strong><a href="https://en.wikipedia.org/wiki/Master_of_Reality">Master of Reality (1972)</a></strong> - Terceiro álbum da banda.</li>
+        <img class="album-cover" src="https://upload.wikimedia.org/wikipedia/en/thumb/4/40/Bsmor.jpg/220px-Bsmor.jpg" alt="Capa do álbum Master of Reality (1972)">
+        <p><strong>Tracklist:</strong>
+            <ul>
+                <li>Sweet Leaf (5:05)</li>
+                <li>After Forever (5:27)</li>
+                <li>Embryo (0:28)</li>
+                <li>Children of the Grave (5:18)</li>
+                <li>Orchid (1:31)</li>
+                <li>Lord of This World (5:26)</li>
+                <li>Solitude (5:02)</li>
+                <li>Into the Void (6:12)</li>
+            </ul>
+        </p>
+    </ul>
+
+    <h2>Músicas Notáveis</h2>
+    <ul>
+        <li><a href="https://en.wikipedia.org/wiki/Iron_Man_(song)">Iron Man</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Paranoid_(song)">Paranoid</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Children_of_the_Grave">Children of the Grave</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/War_Pigs">War Pigs</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Heaven_and_Hell_(Black_Sabbath_song)">Heaven and Hell</a></li>
+    </ul>
+
+    <h2>Integrantes</h2>
+    <p>Os principais integrantes da banda incluem:</p>
+    <ul>
+        <li><a href="https://en.wikipedia.org/wiki/Ozzy_Osbourne">Ozzy Osbourne</a> - Vocal</li>
+        <li><a href="https://en.wikipedia.org/wiki/Tony_Iommi">Tony Iommi</a> - Guitarra</li>
+        <li><a href="https://en.wikipedia.org/wiki/Geezer_Butler">Geezer Butler</a> - Baixo</li>
+        <li><a href="https://en.wikipedia.org/wiki/Bill_Ward_(musician)">Bill Ward</a> - Bateria</li>
+    </ul>
 </body>
 </html>
